@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useContext } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from './pages/home';
-import Login from './pages/login';
-import { AuthContext } from './contexts/Auth';
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import { AuthContext } from "./contexts/Auth";
 
 export default function AppRoutes() {
   const Auth = useContext(AuthContext);
@@ -12,8 +12,8 @@ export default function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='/' element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </Router>
   );

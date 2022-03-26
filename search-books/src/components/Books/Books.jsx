@@ -9,7 +9,7 @@ export default function Books(props) {
     <>
       <BookList>{books.map(book => (
         
-        <BookDiv>
+        <BookDiv key={book.id}>
           <BookName>{book.name}</BookName>
           <BookDescription>{book.description}</BookDescription>
         </BookDiv>))}

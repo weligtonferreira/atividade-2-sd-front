@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SearchDiv = styled.div`
+export const SearchDiv = styled.form`
   display: flex;
 `;
 
@@ -16,8 +16,7 @@ export const Input = styled.input`
 `;
 
 export const Icon = styled.i`
-  margin-left: 1rem;
-  font-size: 1.5rem;
+  margin-right: 0.5rem;
   font-weight: 700;
   color: var(--text-color);
 `;

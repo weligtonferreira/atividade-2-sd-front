@@ -1,12 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { AuthProvider } from "./contexts/Auth";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { AuthProvider } from './contexts/Auth';
+import { SearchProvider } from './contexts/Search';
+import './index.css';
 
 ReactDOM.render(
   <AuthProvider>
-    <App />
+    <SearchProvider>
+      <App />
+    </SearchProvider>
   </AuthProvider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

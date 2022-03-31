@@ -7,7 +7,7 @@ export const Header = styled.header`
 
   height: 15vh;
   padding: 1rem 2rem;
-  background-color: var(--primary-gray);
+  background-color: var(--header-background);
 `;
 
 export const Title = styled.h1`

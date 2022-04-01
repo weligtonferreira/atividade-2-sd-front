@@ -1,50 +1,15 @@
-import styled from 'styled-components';
-
-export const SearchDiv = styled.div`
-  display: flex;
-`;
-
-export const Input = styled.input`
-  margin-right: 1rem;
-  padding: 1.2rem 0.6rem;
-  height: 5vh;
-  width: 40vw;
-  color: var(--input-text);
-  font-size: 1.2rem;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0px 0px 2px 1px var(--primary-gray);
-  border-radius: 0.4rem;
-  outline: 0;
-`;
-
-export const Icon = styled.i`
-  font-weight: 700;
-  color: var(--text-color);
-`;
-
-export const BooksList = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 1rem;
-  padding: 1rem 1rem;
-`;
+import styled from "styled-components";
 
 export const BookDiv = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 1rem;
-  padding: 1rem;
-  width: 150px;
+  width: 100%;
+  min-height: 100vh;
 `;
 
 export const BookImage = styled.img`
-  height: 150px;
+  height: 300px;
+  margin-top: 5rem;
   margin-bottom: 0.4rem;
   border-radius: 0.6rem;
 
@@ -54,7 +19,60 @@ export const BookImage = styled.img`
 `;
 
 export const BookTitle = styled.h3`
-  font-size: 0.8rem;
+  font-size: 1.3rem;
+  margin: 0 auto;
   text-align: left;
-  font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+`;
+
+export const BookInfo = styled.div`
+  display: flex;
+  margin-top: 3rem;
+  padding: 0 2rem;
+`;
+
+export const BookInfoDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0rem 1rem 3rem;
+  width: 100%;
+`;
+export const BookDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+`;
+export const BookDescriptionTitle = styled.h3`
+  margin-bottom: 10px;
+`;
+export const BookDescriptionContent = styled.p`
+  text-align: justify;
+`;
+export const BookComments = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+export const BookCommentsTitle = styled.h4`
+  margin-bottom: 10px;
+`;
+export const BookCommentInput = styled.input`
+  background: #dfdfdf;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  height: 50px;
+  min-width: 350px;
+  width: 100%;
+`;
+export const BookCommentButton = styled.button`
+  background: #189ea7;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+  left: 100%;
+  transform: translateX(-100%);
 `;

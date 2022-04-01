@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   BooksList,
   BookDiv,
@@ -8,30 +8,30 @@ import {
   Icon,
   Input,
   SearchDiv,
-} from './style';
-import api from '../../services/api';
+} from "./style";
+import api from "../../services/api";
 
 export default function Books() {
-  const [searchContent, setSearchContent] = useState('');
+  const [searchContent, setSearchContent] = useState("");
   const [books, setBooks] = useState([]);
   const navigate = useNavigate();
   const appLocation = useLocation();
   const params = new URLSearchParams(appLocation.search);
-  const q = params.get('q');
+  const q = params.get("q");
 
   const handleSubmit = async () => {
     await api
-      .get('/books', {
+      .get("/books", {
         params: {
           q,
           key: process.env.REACT_APP_API_KEY,
           maxResults: 20,
         },
       })
-      .then(res => {
+      .then((res) => {
         setBooks(res.data.items);
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   };
 
   const search = () => {
@@ -47,18 +47,26 @@ export default function Books() {
       <header>
         <h1>SearchBooks</h1>
         <SearchDiv>
-          <Input type='text' onChange={e => setSearchContent(e.target.value)} />
-          <button
-            type='button'
-            style={{
-              padding: '10px',
-              borderRadius: '0.5rem',
-              fontSize: '1rem',
+          <Input
+            type="text"
+            onChange={(e) => setSearchContent(e.target.value)}
+            onKeyUp={(e) => {
+              if (e.key === "Enter") {
+                search();
+              }
             }}
-            className='btn btn-success align-center'
+          />
+          <button
+            type="button"
+            style={{
+              padding: "10px",
+              borderRadius: "0.5rem",
+              fontSize: "1rem",
+            }}
+            className="btn btn-success align-center"
             onClick={() => search()}
           >
-            <Icon className='bi bi-search' />
+            <Icon className="bi bi-search" />
           </button>
         </SearchDiv>
       </header>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Header = styled.header`
   display: flex;
@@ -8,12 +8,13 @@ export const Header = styled.header`
   height: 15vh;
   padding: 1rem 2rem;
   background-color: var(--header-background);
+  width: 100%;
 `;
 
 export const Title = styled.h1`
   margin: 0;
   font-size: 2.1rem;
   font-weight: 700;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--header-title-color);
 `;
